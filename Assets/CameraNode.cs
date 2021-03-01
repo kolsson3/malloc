@@ -16,7 +16,7 @@ public class CameraNode : MonoBehaviour
     void OnMouseDown()
     {
         Debug.Log("Clicked on " + gameObject.name);
-        MoveTo();
+        if(!mainCamera.inDialogue) MoveTo();
     }
 
     public void MoveTo()

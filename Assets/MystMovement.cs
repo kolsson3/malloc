@@ -3,10 +3,11 @@
 public class MystMovement : MonoBehaviour
 {
     public CameraNode currentNode;
+    public bool inDialogue;
 
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && !inDialogue)
         {
             Vector3 p = Input.mousePosition;
 
