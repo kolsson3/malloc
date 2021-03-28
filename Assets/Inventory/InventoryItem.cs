@@ -2,22 +2,21 @@
 
 public class InventoryItem : MonoBehaviour
 {
-    public InventoryObject inventoryObject;
+    [SerializeField] private InventoryCamera inventoryCamera;
     // Start is called before the first frame update
     void Start()
     {
-        this.inventoryObject.Attach(this.gameObject);
+        
     }
 
     void OnMouseDown()
     {
         Debug.Log("Clicked on " + gameObject.name);
-        if (inventoryObject.state == InventoryObject.State.World) this.AppendInventory();
-    }
-
-    public void AppendInventory()
-    {
-        this.inventoryObject.AppendInventory();
+        if (this.inventoryCamera.inventoryItem == null)
+        {
+            this.inventoryCamera.inventoryItem = this.gameObject;
+            this.inventoryCamera.inventoryItem.layer = 5;
+        }
     }
 
     // Update is called once per frame
