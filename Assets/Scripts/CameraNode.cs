@@ -46,6 +46,7 @@ public class CameraNode : MonoBehaviour
     public void Transition()
     {
         mainCamera.transform.position = nextNode.transform.position;
+        if(nextNode.closeup) mainCamera.transform.rotation = nextNode.transform.rotation;
         mainCamera.currentNode = nextNode;
     }
 }

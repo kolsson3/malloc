@@ -8,6 +8,8 @@ TagManager:
   - Item
   - Inspect
   - NPC
+  - Unknown
+  - gamemanager
   layers:
   - Default
   - TransparentFX

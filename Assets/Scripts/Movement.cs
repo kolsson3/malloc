@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DialogueEditor;
 
 public class Movement : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
+        if (ConversationManager.Instance != null && ConversationManager.Instance.IsConversationActive) inDialogue = true;
+        else inDialogue = false;
+
+
         if (Input.GetMouseButtonDown(0) && !inDialogue)
         {
             Vector3 p = Input.mousePosition;

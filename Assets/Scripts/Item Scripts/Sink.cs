@@ -9,7 +9,7 @@ public class Sink : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("MainCamera");
+        player = GameObject.Find("Main Camera");
     }
 
 
