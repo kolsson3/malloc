@@ -34,7 +34,7 @@ public class ConversationTrigger : MonoBehaviour
                 ConversationManager.Instance.SetBool("visitedPantry", hasOpenedPantry);
                 ConversationManager.Instance.SetBool("notVisitedHub", hasSeenHub);
 
-                GameObject.Find("SM_Bld_House_InternalWall_Garage_Door_02").GetComponent<Door>().locked = false;
+                if(needsCoffee) GameObject.Find("DoorToGarage").GetComponent<Door>().locked = false;
             }
         }
         else if(ConversationManager.Instance != null && ConversationManager.Instance.IsConversationActive)
