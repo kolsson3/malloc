@@ -27,6 +27,11 @@ public class CoffinPuzzle : MonoBehaviour
 
     public GameManager gm;
 
+    void Start()
+    {
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
+
     private void OnMouseDown()
     {
         if (pickup.heldItem == Flowers)

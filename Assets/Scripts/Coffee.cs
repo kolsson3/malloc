@@ -7,10 +7,19 @@ public class Coffee : MonoBehaviour
 {
     public NPCConversation convo;
     public ConversationTrigger momConvo;
+    public GameManager gm;
+
+    public void Start()
+    {
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
 
     private void OnMouseDown()
     {
-        ConversationManager.Instance.StartConversation(convo);
-        momConvo.needsCoffee = true;
+        if(!gm.firstHubVisit)
+        {
+            ConversationManager.Instance.StartConversation(convo);
+            momConvo.needsCoffee = true;
+        }   
     }
 }

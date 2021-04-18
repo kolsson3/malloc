@@ -780,7 +780,7 @@ GameObject:
   - component: {fileID: 147379506}
   - component: {fileID: 147379509}
   m_Layer: 0
-  m_Name: SM_Bld_House_InteriorWall_Door_02 (1)
+  m_Name: TragedyDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1186,7 +1186,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1668950114}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!65 &199082790
 BoxCollider:
@@ -1311,7 +1311,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1668950114}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &296268110
 BoxCollider:
@@ -1435,6 +1435,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1033089265}
+  - {fileID: 649930957}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1810,7 +1811,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1668950114}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &421137475
 BoxCollider:
@@ -3008,6 +3009,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4322087680485926, guid: 914af93a351f70b43845964def589800, type: 3}
   m_PrefabInstance: {fileID: 648642996}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &649930957 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6696193404639398970, guid: ecc90226f92290741bff54f9e1523793, type: 3}
+  m_PrefabInstance: {fileID: 1399302614}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &655738915
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3261,7 +3267,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &688260626
 Transform:
   m_ObjectHideFlags: 0
@@ -3395,6 +3401,10 @@ PrefabInstance:
     - target: {fileID: 1068211853775766, guid: 914af93a351f70b43845964def589800, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Shop_Concrete_01 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1068211853775766, guid: 914af93a351f70b43845964def589800, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4322087680485926, guid: 914af93a351f70b43845964def589800, type: 3}
       propertyPath: m_RootOrder
@@ -4385,6 +4395,7 @@ Transform:
   - {fileID: 1238211810}
   - {fileID: 1663860922}
   - {fileID: 1978058426}
+  - {fileID: 999937022}
   m_Father: {fileID: 2112512893}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4685,7 +4696,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1668950114}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!65 &899174257
 BoxCollider:
@@ -5111,7 +5122,7 @@ GameObject:
   - component: {fileID: 936404342}
   - component: {fileID: 936404345}
   m_Layer: 0
-  m_Name: SM_Bld_House_InteriorWall_Door_02 (1)
+  m_Name: MovingDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5207,7 +5218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openThreshold: 3
   open: 0
-  locked: 1
+  locked: 0
   lockedText: {fileID: 0}
 --- !u!1001 &945028814
 PrefabInstance:
@@ -5703,7 +5714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b728afefec43c54bb68407853fd6c95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentNode: {fileID: 0}
+  currentNode: {fileID: 421137476}
   inDialogue: 0
 --- !u!114 &963194231
 MonoBehaviour:
@@ -5836,12 +5847,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 999937021}
-  m_LocalRotation: {x: 0.45787388, y: 0, z: 0, w: 0.88901716}
-  m_LocalPosition: {x: 0.404, y: 2.47, z: 12.1}
+  m_LocalRotation: {x: 0.45787388, y: -0, z: -0, w: 0.88901716}
+  m_LocalPosition: {x: -2.486, y: 1.38, z: 12.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1668950114}
-  m_RootOrder: 0
+  m_Father: {fileID: 857306733}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 37.78, y: 0, z: 0}
 --- !u!65 &999937023
 BoxCollider:
@@ -6740,7 +6751,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1151171096
 Transform:
   m_ObjectHideFlags: 0
@@ -7480,7 +7491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3404461974380039053, guid: 87a1204aea6520c4dba3f9229331f4cb, type: 3}
       propertyPath: scene
-      value: Memory3
+      value: Menu
       objectReference: {fileID: 0}
     - target: {fileID: 3404461974380039054, guid: 87a1204aea6520c4dba3f9229331f4cb, type: 3}
       propertyPath: m_Name
@@ -7555,6 +7566,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4767689717576964, guid: f6bb4e849a5b9a44f9cd44f193e611fc, type: 3}
   m_PrefabInstance: {fileID: 1335885747}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1399302614
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 301425945}
+    m_Modifications:
+    - target: {fileID: 6696193404639398970, guid: ecc90226f92290741bff54f9e1523793, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696193404639398970, guid: ecc90226f92290741bff54f9e1523793, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696193404639398970, guid: ecc90226f92290741bff54f9e1523793, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696193404639398970, guid: ecc90226f92290741bff54f9e1523793, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696193404639398970, guid: ecc90226f92290741bff54f9e1523793, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696193404639398970, guid: ecc90226f92290741bff54f9e1523793, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696193404639398970, guid: ecc90226f92290741bff54f9e1523793, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696193404639398970, guid: ecc90226f92290741bff54f9e1523793, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696193404639398970, guid: ecc90226f92290741bff54f9e1523793, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696193404639398970, guid: ecc90226f92290741bff54f9e1523793, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696193404639398970, guid: ecc90226f92290741bff54f9e1523793, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696193404639398971, guid: ecc90226f92290741bff54f9e1523793, type: 3}
+      propertyPath: m_Name
+      value: LockedDoor
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ecc90226f92290741bff54f9e1523793, type: 3}
 --- !u!1001 &1405639859
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9012,7 +9080,6 @@ Transform:
   m_LocalPosition: {x: -50.17, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 999937022}
   - {fileID: 296268109}
   - {fileID: 421137474}
   - {fileID: 899174256}
@@ -11027,6 +11094,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Shop_Concrete_01 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1068211853775766, guid: 914af93a351f70b43845964def589800, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4322087680485926, guid: 914af93a351f70b43845964def589800, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -11827,6 +11898,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8100037620739067589, guid: a33ae1c27bd294e49968ef1ae2de2ce7, type: 3}
+      propertyPath: birthdayDoor
+      value: 
+      objectReference: {fileID: 3760156907439572261}
+    - target: {fileID: 8100037620739067589, guid: a33ae1c27bd294e49968ef1ae2de2ce7, type: 3}
+      propertyPath: tragedyDoor
+      value: 
+      objectReference: {fileID: 147379509}
+    - target: {fileID: 8100037620739067589, guid: a33ae1c27bd294e49968ef1ae2de2ce7, type: 3}
+      propertyPath: movingDoor
+      value: 
+      objectReference: {fileID: 936404345}
+    - target: {fileID: 8100037620739067589, guid: a33ae1c27bd294e49968ef1ae2de2ce7, type: 3}
+      propertyPath: endCap1
+      value: 
+      objectReference: {fileID: 857306732}
+    - target: {fileID: 8100037620739067589, guid: a33ae1c27bd294e49968ef1ae2de2ce7, type: 3}
+      propertyPath: endCap2
+      value: 
+      objectReference: {fileID: 1151171095}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a33ae1c27bd294e49968ef1ae2de2ce7, type: 3}
 --- !u!114 &1574477229409644822 stripped
@@ -11868,7 +11959,7 @@ GameObject:
   - component: {fileID: 3801382283069237952}
   - component: {fileID: 3760156907439572261}
   m_Layer: 0
-  m_Name: SM_Bld_House_InteriorWall_Door_02
+  m_Name: BirthdayDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

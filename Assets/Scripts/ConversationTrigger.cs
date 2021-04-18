@@ -13,9 +13,11 @@ public class ConversationTrigger : MonoBehaviour
     public bool hasOpenedPantry = false;
     public bool hasSeenHub = false;
 
+    public MovingPuzzle movingPuzzle;
+
     private void OnMouseDown()
     {
-        if (ConversationManager.Instance == null || !ConversationManager.Instance.IsConversationActive)
+        if (!GameObject.Find("GameManager").GetComponent<GameManager>().firstSpeech && (ConversationManager.Instance == null || !ConversationManager.Instance.IsConversationActive))
         {
             if (!init)
             {
@@ -37,10 +39,9 @@ public class ConversationTrigger : MonoBehaviour
                 if(needsCoffee) GameObject.Find("DoorToGarage").GetComponent<Door>().locked = false;
             }
         }
-        else if(ConversationManager.Instance != null && ConversationManager.Instance.IsConversationActive)
+        else
         {
-
+            movingPuzzle.Dialogue();
         }
-        
     }
 }

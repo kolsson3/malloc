@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DialogueEditor;
+using UnityEngine.SceneManagement;
 
 public class GameStart : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class GameStart : MonoBehaviour
     {
         StartCoroutine(Fading());
         if (GameObject.Find("GameManager").GetComponent<GameManager>().lastScene == "")
+        {
+            ConversationManager.Instance.StartConversation(introText);
+        }
+        else if (SceneManager.GetActiveScene().name == "Memory3")
         {
             ConversationManager.Instance.StartConversation(introText);
         }
