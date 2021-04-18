@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hub.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Memory2.unity
+    guid: e3205c8f99b7d7d49b084aa043067424
+  - enabled: 1
+    path: Assets/Scenes/Memory3.unity
+    guid: 4a13d5841f2574c4db1f77a2023804e0
+  - enabled: 1
+    path: Assets/Scenes/Surgery Room.unity
+    guid: b6f19dff389ea8f4c8ba3583c45abb07
   m_configObjects: {}

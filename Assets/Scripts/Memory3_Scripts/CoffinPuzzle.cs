@@ -25,6 +25,8 @@ public class CoffinPuzzle : MonoBehaviour
     public bool donePhoto = false;
     public bool doneFlowers = false;
 
+    public GameManager gm;
+
     private void OnMouseDown()
     {
         if (pickup.heldItem == Flowers)
@@ -63,18 +65,9 @@ public class CoffinPuzzle : MonoBehaviour
             Dad.SetActive(false);
             Ash.SetActive(false);
             Portal.SetActive(true);
+
+            gm.memoriesComplete++;
+            gm.tragedyComplete = true;
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

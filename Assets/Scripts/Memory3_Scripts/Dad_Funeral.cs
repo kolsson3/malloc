@@ -10,12 +10,19 @@ public class Dad_Funeral: MonoBehaviour
 
     public GameObject coffinPuzzle;
 
+    public bool initConvoDone = false;
+
     public bool checkedCoffin = false;
     public bool doneCoffin = false;
 
     private void OnMouseDown()
     {
-        ConversationManager.Instance.StartConversation(initConvo);
+        if(!initConvoDone)
+        {
+            ConversationManager.Instance.StartConversation(initConvo);
+            initConvoDone = true;
+        }
+        else ConversationManager.Instance.StartConversation(loopConvo);
 
         /*if (ConversationManager.Instance == null || !ConversationManager.Instance.IsConversationActive)
         {

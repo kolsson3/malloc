@@ -10,8 +10,7 @@ public class PortalDoor : MonoBehaviour
     {
         if (!this.gameObject.GetComponent<Door>().locked)
         {
-            Debug.Log("Should fire");
-            GameObject.Find("Character_Mother_02").GetComponent<ConversationTrigger>().hasOpenedPantry = true;
+            GameObject.Find("Character_Mother").GetComponent<ConversationTrigger>().hasOpenedPantry = true;
         }
     }
 }

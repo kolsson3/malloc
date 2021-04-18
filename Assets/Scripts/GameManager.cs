@@ -10,6 +10,13 @@ public class GameManager : MonoBehaviour
     public bool firstHubVisit = false;
     public bool firstSpeech = false;
 
+    public int memoriesComplete = 0;
+
+    public bool tragedyComplete = false;
+    public bool birthdayComplete = false;
+    public bool movingComplete = false;
+
+
     // Start is called before the first frame update
     void Awake()
     {
