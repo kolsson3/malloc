@@ -9,19 +9,16 @@ public class CoffeeMachine : MonoBehaviour
     public bool hasPot = false;
     public bool hasGrounds = false;
     public bool coffeeReady = false;
+    public bool puzzleComplete = false;
 
     GameObject coffeePot;
+    public GameManager gm;
 
     // Start is called before the first frame update
     void Start()
     {
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         player = GameObject.Find("Main Camera");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void OnMouseDown()
@@ -50,11 +47,11 @@ public class CoffeeMachine : MonoBehaviour
                 }
             }
         }
-        else if (heldName == "SM_Prop_Jar_01")
+        else if (heldName == "SM_Prop_Jar_01" && gm.firstHubVisit)
         {
             hasGrounds = true;
             Destroy(player.GetComponent<Pickup>().heldItem.gameObject);
-            if (hasWater)
+            if (hasWater && hasPot)
             {
                 coffeePot.transform.GetChild(1).gameObject.SetActive(true);
             }
@@ -62,8 +59,7 @@ public class CoffeeMachine : MonoBehaviour
         else if (hasPot && hasWater && hasGrounds && heldName == "SM_Item_Mug_01")
         {
             player.GetComponent<Pickup>().heldItem.transform.GetChild(0).gameObject.SetActive(true);
+            puzzleComplete = true;
         }
     }
-
-    
 }

@@ -11,12 +11,10 @@ public class Portal : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Memory1")
         {
-            GameObject.Find("Character_Mother_02").GetComponent<ConversationTrigger>().hasSeenHub = true;
+            GameObject.Find("Character_Mother").GetComponent<ConversationTrigger>().hasSeenHub = true;
         }
 
         GameObject.Find("GameManager").GetComponent<GameManager>().lastScene = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(scene);
-
-        
     }
 }

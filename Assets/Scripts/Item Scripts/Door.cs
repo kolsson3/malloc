@@ -11,9 +11,19 @@ public class Door : MonoBehaviour
 
     public NPCConversation lockedText;
 
+    AudioSource doorAudio;
+    AudioClip doorLocked;
+    AudioClip doorOpen;
+
+    //Resources.Load("magnifier") as Texture2D
+
     void Start()
     {
         mainCamera = GameObject.Find("Main Camera");
+
+        doorAudio = gameObject.AddComponent(typeof(AudioSource)) as AudioSource;
+        doorLocked = Resources.Load("door_locked") as AudioClip;
+        doorOpen = Resources.Load("door_open") as AudioClip;
     }
 
     void OnMouseDown()
@@ -27,11 +37,13 @@ public class Door : MonoBehaviour
                 if (!open) this.transform.Rotate(0f, -85f, 0f);
                 else this.transform.Rotate(0f, 85f, 0f);
                 open = !open;
+                doorAudio.PlayOneShot(doorOpen, 1.0f);
             }
             else
             {
                 lockedText = GameObject.Find("LockedDoor").GetComponent<NPCConversation>();
                 ConversationManager.Instance.StartConversation(lockedText);
+                doorAudio.PlayOneShot(doorLocked, 0.75f);
             }
         } 
 
