@@ -45,25 +45,13 @@ public class GameManager : MonoBehaviour
             if (movingComplete) GameObject.Find("MovingDoor").GetComponent<Door>().locked = true;
             if (birthdayComplete) GameObject.Find("BirthdayDoor").GetComponent<Door>().locked = true;
 
-            if(memoriesComplete == 1 && !secondSpeech)
+            if (memoriesComplete == 1 && !secondSpeech)
             {
-                secondSpeech = true;
-                //Call the next announcement when written
+                PlaySecondConvo();
+                Debug.Log("test");
             }
-            else if (memoriesComplete == 2 && !thirdSpeech)
-            {
-                thirdSpeech = true;
-                //Call the next announcement when written
-
-            }
-            else if (memoriesComplete == 3 && !finalSpeech)
-            {
-                finalSpeech = true;
-                //Call the next announcement when written
-
-            }
-
-
+            else if (memoriesComplete == 2 && !thirdSpeech) PlayThirdConvo();
+            else if (memoriesComplete == 3 && !finalSpeech) PlayFinalConvo();
 
             if (tragedyComplete && birthdayComplete && movingComplete)
             {
@@ -94,5 +82,23 @@ public class GameManager : MonoBehaviour
     {
         ConversationManager.Instance.StartConversation(GameObject.Find("FirstHubConvo").GetComponent<NPCConversation>());
         firstSpeech = true;
+    }
+
+    void PlaySecondConvo()
+    {
+        ConversationManager.Instance.StartConversation(GameObject.Find("SecondHubConvo").GetComponent<NPCConversation>());
+        secondSpeech = true;
+    }
+    
+    void PlayThirdConvo()
+    {
+        ConversationManager.Instance.StartConversation(GameObject.Find("ThirdHubConvo").GetComponent<NPCConversation>());
+        thirdSpeech = true;
+    }
+
+    void PlayFinalConvo()
+    {
+        ConversationManager.Instance.StartConversation(GameObject.Find("FinalHubConvo").GetComponent<NPCConversation>());
+        finalSpeech = true;
     }
 }
