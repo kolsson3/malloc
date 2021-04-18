@@ -45,11 +45,7 @@ public class GameManager : MonoBehaviour
             if (movingComplete) GameObject.Find("MovingDoor").GetComponent<Door>().locked = true;
             if (birthdayComplete) GameObject.Find("BirthdayDoor").GetComponent<Door>().locked = true;
 
-            if (memoriesComplete == 1 && !secondSpeech)
-            {
-                PlaySecondConvo();
-                Debug.Log("test");
-            }
+            if (memoriesComplete == 1 && !secondSpeech) PlaySecondConvo();
             else if (memoriesComplete == 2 && !thirdSpeech) PlayThirdConvo();
             else if (memoriesComplete == 3 && !finalSpeech) PlayFinalConvo();
 
