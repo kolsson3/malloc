@@ -28,11 +28,6 @@ public class BookTriggered : MonoBehaviour
         if (talkedToBetty && talkedToMom)
         {
             theBook.gameObject.SetActive(true);
-            GameObject.Find("FrontDoor").GetComponent<Door>().locked = false;
-            GameManager gm = GameObject.Find("GameManager").GetComponent<GameManager>();
-            gm.memoriesComplete++;
-            gm.birthdayComplete = true;
-
         }
     }
 }
