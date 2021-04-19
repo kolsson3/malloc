@@ -8,6 +8,7 @@ public class BirthdayMomDialogue : MonoBehaviour
     public NPCConversation initConvo;
     public NPCConversation loopConvo;
     bool init = false;
+    bool gotCakeRecipe = false;
 
     private void OnMouseDown()
     {
