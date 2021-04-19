@@ -65,6 +65,7 @@ public class GameManager : MonoBehaviour
             if (firstHubVisit)
             {
                 GameObject.Find("ParentBedroomDoor").GetComponent<Door>().locked = false;
+                GameObject.Find("DoorToGarage").GetComponent<Door>().locked = false;
                 GameObject coffeePuzzle = GameObject.Find("CoffeePuzzle");
                 foreach(Transform child in coffeePuzzle.transform)
                 {

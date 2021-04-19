@@ -17,9 +17,9 @@ public class ConversationTrigger : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (!GameObject.Find("GameManager").GetComponent<GameManager>().firstSpeech && (ConversationManager.Instance == null || !ConversationManager.Instance.IsConversationActive))
+        if (ConversationManager.Instance == null || !ConversationManager.Instance.IsConversationActive)
         {
-            if (!init)
+            if (!init && !GameObject.Find("GameManager").GetComponent<GameManager>().firstSpeech)
             {
                 init = true;
                 ConversationManager.Instance.StartConversation(initConvo);
@@ -29,7 +29,7 @@ public class ConversationTrigger : MonoBehaviour
                 coffeePuzzle.transform.GetChild(2).gameObject.SetActive(true);
 
             }
-            else
+            else if(!GameObject.Find("GameManager").GetComponent<GameManager>().firstSpeech)
             {
                 ConversationManager.Instance.StartConversation(loopConvo);
                 ConversationManager.Instance.SetBool("needCoffee", needsCoffee);
@@ -38,10 +38,10 @@ public class ConversationTrigger : MonoBehaviour
 
                 if(needsCoffee) GameObject.Find("DoorToGarage").GetComponent<Door>().locked = false;
             }
-        }
-        else
-        {
-            movingPuzzle.Dialogue();
+            else
+            {
+                movingPuzzle.Dialogue();
+            }
         }
     }
 }
