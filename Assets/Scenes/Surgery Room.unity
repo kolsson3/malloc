@@ -2323,6 +2323,7 @@ GameObject:
   m_Component:
   - component: {fileID: 572011328}
   - component: {fileID: 572011329}
+  - component: {fileID: 572011330}
   m_Layer: 0
   m_Name: EndingCutscene
   m_TagString: Untagged
@@ -2373,6 +2374,8 @@ PlayableDirector:
     value: {fileID: 1968500074}
   - key: {fileID: -941384130957111743, guid: 8b64640bda2ef8c40974eb8e49744500, type: 2}
     value: {fileID: 1345798337}
+  - key: {fileID: 5440000579791481348, guid: 8b64640bda2ef8c40974eb8e49744500, type: 2}
+    value: {fileID: 572011330}
   m_ExposedReferences:
     m_References:
     - a1b3c5b50b51caf46a55bd2dc91269f3: {fileID: 1573095581}
@@ -2385,6 +2388,36 @@ PlayableDirector:
     - a7f57e28f8546f84f885f9eeb69bca52: {fileID: 33424778}
     - bd325d14d8231d6458e542db3782708b: {fileID: 742500000}
     - 70d9f4737d868cd43a72ae9f09c00e1a: {fileID: 2143976314}
+--- !u!114 &572011330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572011327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 42857ab68d891424bbde5bfc3001174c, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 572011327}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &589215704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7790,8 +7823,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1968500072}
-  m_LocalRotation: {x: -0.5123711, y: 0.48542836, z: -0.11923262, w: -0.08193836}
-  m_LocalPosition: {x: 1.9599999, y: 0.92, z: -7.07}
+  m_LocalRotation: {x: 0, y: 0.9966374, z: -0, w: -0.08193836}
+  m_LocalPosition: {x: 1.9599999, y: 0.44, z: -8.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1037105257}
@@ -7854,8 +7887,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
-  far clip plane: 5000
+  near clip plane: 0.3
+  far clip plane: 1000
   field of view: 60
   orthographic: 0
   orthographic size: 5
