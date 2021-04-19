@@ -11,7 +11,7 @@ public class BirthdayBettyDialogue : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (!GameObject.Find("GameManager").GetComponent<GameManager>().firstSpeech && (ConversationManager.Instance == null || !ConversationManager.Instance.IsConversationActive))
+        if (ConversationManager.Instance == null || !ConversationManager.Instance.IsConversationActive)
         {
             if (!init)
             {
