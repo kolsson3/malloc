@@ -5,7 +5,7 @@ public class MenuController : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("Memory1");
+        SceneManager.LoadScene("Demo");
     }
 
     public void QuitGame()
